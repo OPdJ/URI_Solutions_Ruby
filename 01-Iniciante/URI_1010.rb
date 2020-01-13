@@ -7,4 +7,7 @@
 a = gets.split(" ")
 b = gets.split(" ")
 
-puts "VALOR A PAGAR: R$ #{sprintf('%.2f', (a[1].to_i*a[2].to_f)+(b[1].to_i*b[2].to_f))}"
+valorA = a[1].to_i*a[2].to_f
+valorB = b[1].to_i*b[2].to_f
+
+puts "VALOR A PAGAR: R$ #{sprintf('%.2f', valorA+valorB)}"

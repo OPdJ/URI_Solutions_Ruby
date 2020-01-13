@@ -4,9 +4,12 @@
   (a+b+ABS(a-b))/2
 =end
 
-values = gets.split(' ')
+values = gets.split(' ').map(&:to_i)
 
-values = values.map(&:to_i)
-valueAB = (values[0]+values[1]+(values[0]-values[1]).abs)/2
+maior = 0
 
-puts "#{(valueAB+values[2]+(valueAB-values[2]).abs)/2} eh o maior"
+for i in (0...values.length) do
+  maior = (maior+values[i]+(maior-values[i]).abs)/2
+end
+
+puts "#{maior} eh o maior"

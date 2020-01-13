@@ -5,10 +5,10 @@
    sqrt((x2-x1)²+(y2-y1)²)
 =end
 
-valueA = gets.split(' ')
-valueB = gets.split(' ')
+valueA = gets.split(' ').map(&:to_f)
+valueB = gets.split(' ').map(&:to_f)
 
-valueA = valueA.map(&:to_f)
-valueB = valueB.map(&:to_f)
+valueCalcA = (valueB[0]-valueA[0])**2
+valueCalcB = (valueB[1]-valueA[1])**2
 
-puts "#{sprintf('%.4f', Math.sqrt((valueB[0]-valueA[0])**2+(valueB[1]-valueA[1])**2))}"
+puts "#{sprintf('%.4f', Math.sqrt(valueCalcA+valueCalcB))}"

@@ -7,11 +7,10 @@
     e) a área do retângulo que tem lados A e B.
 =end
 
-valueA = gets.split(' ')
-valueA = valueA.map(&:to_f)
+valueA = gets.split(' ').map(&:to_f)
 
-puts "TRIANGULO: #{sprintf('%.3f', (valueA[0]*valueA[2]/2))}\n" +
-     "CIRCULO: #{sprintf('%.3f',   (3.14159*valueA[2]*valueA[2]))}\n" +
-     "TRAPEZIO: #{sprintf('%.3f',  ((valueA[0]+valueA[1])*valueA[2])/2)}\n" +
-     "QUADRADO: #{sprintf('%.3f',  valueA[1]*valueA[1])}\n" +
+puts "TRIANGULO: #{sprintf('%.3f', (valueA[0]*valueA[2]/2))}\n" <<
+     "CIRCULO: #{sprintf('%.3f',   (3.14159*valueA[2]*valueA[2]))}\n" <<
+     "TRAPEZIO: #{sprintf('%.3f',  ((valueA[0]+valueA[1])*valueA[2])/2)}\n" <<
+     "QUADRADO: #{sprintf('%.3f',  valueA[1]*valueA[1])}\n" <<
      "RETANGULO: #{sprintf('%.3f', valueA[0]*valueA[1])}\n"
