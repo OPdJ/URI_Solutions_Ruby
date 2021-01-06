@@ -1,17 +1,14 @@
-=begin
-    Leia 3 valores de ponto flutuante e efetue o cálculo das raízes da equação de Bhaskara. 
-    Se não for possível calcular as raízes, mostre a mensagem correspondente 
-    “Impossivel calcular”, caso haja uma divisão por 0 ou raiz de numero negativo.
-=end
+# Leia 3 valores de ponto flutuante e efetue o cálculo das raízes da equação de Bhaskara.
+# Se não for possível calcular as raízes, mostre a mensagem correspondente
+# “Impossivel calcular”, caso haja uma divisão por 0 ou raiz de numero negativo.
 
-values = gets.split(' ').map(&:to_f)
+value_a, value_b, value_c = gets.split(' ').map(&:to_f)
 
-valueA = values[1]**2-(4*values[0]*values[2])
+value_delta = value_b**2 - (4 * value_a * value_c)
 
-
-if(values[0].zero? || valueA.negative?)
-    puts "Impossivel calcular"
+if value_a.zero? || value_delta.negative?
+  puts 'Impossivel calcular'
 else
-    puts "R1 = #{sprintf('%.5f', (-values[1]+(Math.sqrt(valueA)))/(2*values[0]))}"
-    puts "R2 = #{sprintf('%.5f', (-values[1]-(Math.sqrt(valueA)))/(2*values[0]))}"    
+  puts "R1 = #{format('%.5f', (-value_b + Math.sqrt(value_delta)) / (2 * value_a))}"
+  puts "R2 = #{format('%.5f', (-value_b - Math.sqrt(value_delta)) / (2 * value_a))}"
 end

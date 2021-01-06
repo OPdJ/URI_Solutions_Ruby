@@ -1,8 +1,6 @@
-=begin
-    Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento 
-    em uma fábrica, e informe-o expresso no formato horas:minutos:segundos.
-=end
+# Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento
+# em uma fábrica, e informe-o expresso no formato horas:minutos:segundos.
 
-valueA = gets.to_i
+value_a = gets.to_i
 
-puts "#{(valueA/3600)}:#{(valueA%3600)/60}:#{(valueA%60)}"
+puts "#{value_a / 3600}:#{(value_a % 3600) / 60}:#{value_a % 60}"

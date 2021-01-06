@@ -1,28 +1,27 @@
-=begin
-  Com base na tabela abaixo, escreva um programa que leia o código de um item e a 
-  quantidade deste item. A seguir, calcule e mostre o valor da conta a pagar.
-=end
+# Com base na tabela abaixo, escreva um programa que leia o código de um item e a
+# quantidade deste item. A seguir, calcule e mostre o valor da conta a pagar.
 
 lanche = {
-  item_1:
-  {codigo: 1, item: "cachorro quente", preco: 4.00},
-  item_2:
-  {codigo: 2, item: "x salada", preco: 4.50},
-  item_3:
-  {codigo: 3, item: "x bacon", preco: 5.00},
-  item_4:
-  {codigo: 4, item: "torrada simples", preco: 2.00},
-  item_5:
-  {codigo: 5, item: "refrigerante", preco: 1.50}
+  itema:
+  { codigo: 1, item: 'cachorro quente', preco: 4.00 },
+  itemb:
+  { codigo: 2, item: 'x salada', preco: 4.50 },
+  itemc:
+  { codigo: 3, item: 'x bacon', preco: 5.00 },
+  itemd:
+  { codigo: 4, item: 'torrada simples', preco: 2.00 },
+  iteme:
+  { codigo: 5, item: 'refrigerante', preco: 1.50 }
 }
 
-valueA = gets.split(' ').map(&:to_i)
+value_a, value_b = gets.split(' ').map(&:to_i)
+result_value = 0
 
-lanche.each do |key, item|
-  if lanche[key][:codigo] == valueA[0]
-    valueA = lanche[key][:preco] * valueA[1]
+lanche.each do |_key, value|
+  if value[:codigo] == value_a
+    result_value = value[:preco] * value_b
     break
   end
 end
 
-puts "Total: R$ #{sprintf("%.2f", valueA)}"
+puts "Total: R$ #{format('%.2f', result_value)}"
